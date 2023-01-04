@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "GiftRegister"
 include ':app'
+include ':sstheme'
+include ':authentication'
+include ':welcome'
+include ':giftregister'

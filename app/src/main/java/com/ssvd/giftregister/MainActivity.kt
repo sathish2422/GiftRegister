@@ -16,18 +16,20 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.ssvd.giftregister.ui.theme.GiftRegisterTheme
+//import com.ssvd.sstheme.theme.GiftRegisterTheme
 class MainActivity : ComponentActivity() {
     private lateinit var navController: NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             GiftRegisterTheme {
+                SetUpAppNavGraph()
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                 //   modifier = Modifier.fillMaxSize(),
+                   // color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                  //  Greeting("Android")
                 }
             }
         }
@@ -45,6 +47,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WelcomeScreen() {
@@ -53,6 +56,7 @@ fun WelcomeScreen() {
     }
 
 }
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SplashScreen(navController: NavController){
